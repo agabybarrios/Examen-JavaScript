@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title>Pregunta 6</title>
+     <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+     <ul class="list">
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+     </ul>
+
+     <button class="clickeable" type="button" name="button">Add</button>
+     <button class="clickeable2" type="button" name="button">Remove</button>
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="js/scripts.js"></script>
+
+     <script type="text/javascript">
+       $(document).ready(function(){
+
+         $(".clickeable").click(function(){
+           var length = $("li").length;
+           $(".list").append("<li>" + (length + 1) + "</li>" );
+         });
+
+         $(".clickeable2").click(function(){
+           $(".list li:first").hide();
+         });
+
+
+
+
+       }); //cierre de $(document)
+
+     </script>
+  </body>
+</html>
